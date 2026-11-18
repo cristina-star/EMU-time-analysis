@@ -1,6 +1,7 @@
 # EMU calibration and imaging analysis
 
-These scripts and notebooks were developed for the **Evolutionary Map of the Universe (EMU) survey with ASKAP**. They investigate how calibration affects radio images as a function of with time (and therefore elevation).
+
+These scripts and notebooks were developed during my visit to CSIRO for work on the **Evolutionary Map of the Universe (EMU) survey with ASKAP**. They support the analyses presented in [ASKAP_cal_notes.pdf](ASKAP_cal_notes.pdf), which describes the methods and results of this work. The analyses examine how calibration and imaging choices affect EMU images and source measurements, including their variation with elevation.
 
 For the full observation and each 15-minute interval, the workflow first makes images from the pipeline-calibrated data. It then runs an extra bandpass-calibration step with cbpcalibrator, solving for frequency-dependent amplitude and phase gains against a RACS-global sky model for each beam. These gains are applied to a copy of the data, and the imaging is repeated to produce before-and-after comparisons. Two separate Python programs extract image-quality measurements, gain amplitudes and individual source fluxes. The notebooks plot and compare these results.
 
